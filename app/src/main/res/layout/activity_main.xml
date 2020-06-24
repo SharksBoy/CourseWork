@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.25"
+        android:background="@drawable/logo180">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_auntification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="auntification"
+            android:textSize="30sp"
+            android:typeface="monospace" />
+
+        <LinearLayout
+            android:id="@+id/ll_1_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="3"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/tv_login"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_1_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/tv_password"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="247dp"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:text="@string/bt_login"
+            android:textSize="24sp"
+            android:background="@drawable/fileds"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Kursovaya1</string>
+    <string name="bt_login">Login</string>
+    <string name="tv_password">password</string>
+    <string name="tv_login">Login</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Timetable</string>
+    <string name="title_notifications">Info</string>
+    <string name="title_news">News</string>
+</resources>

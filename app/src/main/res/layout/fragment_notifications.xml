@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+    <TextView
+        android:id="@+id/text_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/colorButtonNormal"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/site_tksu"
+        android:layout_width="320dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="37dp"
+        android:text="Site TKSU"
+        app:layout_constraintBottom_toTopOf="@+id/site_moodle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_notifications"/>
+
+    <Button
+        android:id="@+id/site_moodle"
+        android:layout_width="320dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="37dp"
+        android:text="Site Moodle"
+        app:layout_constraintBottom_toTopOf="@+id/site_outlook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/site_tksu"/>
+
+    <Button
+        android:id="@+id/site_outlook"
+        android:layout_width="320dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="37dp"
+        android:text="Site outlook"
+        app:layout_constraintBottom_toTopOf="@+id/maps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/site_moodle"/>
+
+    <Button
+        android:id="@+id/maps"
+        android:layout_width="320dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="37dp"
+        android:text="Maps"
+        app:layout_constraintBottom_toTopOf="@+id/telephone_tksu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/site_outlook"/>
+
+    <Button
+        android:id="@+id/telephone_tksu"
+        android:layout_width="321dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="188dp"
+        android:text="Telephone TKSU"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maps"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
