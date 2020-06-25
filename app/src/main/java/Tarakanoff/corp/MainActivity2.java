@@ -15,10 +15,12 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import Tarakanoff.corp.ui.home.HomeFragment;
+
 public class MainActivity2 extends AppCompatActivity {
 
     public RecyclerView numbersList;
-    //public NumbersAdapter numbersAdapter;
+    public HomeFragment.NumbersAdapter numbersAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,15 +40,15 @@ public class MainActivity2 extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
 
-       numbersList = findViewById(R.id.rv_bd);
+        numbersList = findViewById(R.id.rv_bd);
 
-       LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-       numbersList.setLayoutManager(layoutManager);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        numbersList.setLayoutManager(layoutManager);
 
-       numbersList.setHasFixedSize(false);
+        numbersList.setHasFixedSize(false);
 
-       //numbersAdapter = new NumbersAdapter(100, this);
-       //numbersList.setAdapter(numbersAdapter);
+        numbersAdapter = new HomeFragment.NumbersAdapter(2, this);
+        numbersList.setAdapter(numbersAdapter);
 
 
     }

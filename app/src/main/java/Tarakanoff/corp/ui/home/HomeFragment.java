@@ -25,7 +25,6 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
 
 
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
@@ -34,9 +33,11 @@ public class HomeFragment extends Fragment {
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
 
-//        Button all_std = root.findViewById(R.id.all_std);
-//        TextView textView1 = root.findViewById(R.id.tv_number_item);
-//        all_std.setOnClickListener(v -> textView1.setText ("туть"));
+
+
+        //Button all_std = root.findViewById(R.id.all_std);
+        //Button all_tch = root.findViewById(R.id.all_tch);
+
 
 
 
@@ -44,17 +45,18 @@ public class HomeFragment extends Fragment {
     }
 
 
-    public class NumbersAdapter extends RecyclerView.Adapter<NumbersAdapter.NumbersViewHolder> {
+    public static class NumbersAdapter extends RecyclerView.Adapter<NumbersAdapter.NumbersViewHolder> {
 
-//        private static int viewHolderCount;
-//        private int numberItems;
+        Button all_std = root.findViewById(R.id.all_std);
+        Button all_tch = root.findViewById(R.id.all_tch);
 
-        private Context parent;
+        public int numberItems;
+
+        public Context parent;
 
         public NumbersAdapter(int numberOfItems, Context parent) {
 
-//            numberItems = numberOfItems;
-//            viewHolderCount = 0;
+            numberItems = numberOfItems;
 
             this.parent = parent;
         }
@@ -62,60 +64,48 @@ public class HomeFragment extends Fragment {
         @NonNull
         @Override
         public NumbersViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return null;
+            Context context = parent.getContext();
+            int layoutIdForListItem = R.layout.number_list_item;
+
+            LayoutInflater inflater = LayoutInflater.from(context);
+
+            View view = inflater.inflate(layoutIdForListItem, parent, false);
+
+            NumbersViewHolder viewHolder = new NumbersViewHolder(view);
+
+            return viewHolder;
         }
 
         @Override
         public void onBindViewHolder(@NonNull NumbersViewHolder holder, int position) {
 
+
+
+            all_std.setOnClickListener(v -> holder.bind("туть"));
+            all_tch.setOnClickListener(v -> holder.bind("туть"));
+
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return numberItems;
+    }
+
+    class NumbersViewHolder extends RecyclerView.ViewHolder {
+
+        TextView textView;
+
+        public NumbersViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            textView = itemView.findViewById(R.id.tv_view_holder_number);
         }
 
-        @Override
-        public int getItemCount() {
-            return 0;
-        }
-
-//        @SuppressLint("SetTextI18n")
-//        @NonNull
-//        @Override
-//        public Tarakanoff.corp.NumbersAdapter.NumbersViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//            Context context = parent.getContext();
-//            int layoutIdForListItem = R.layout.number_list_item;
-//
-//            LayoutInflater inflater = LayoutInflater.from(context);
-//
-//            View view = inflater.inflate(layoutIdForListItem, parent, false);
-//
-//            NumbersViewHolder viewHolder = new NumbersViewHolder(view);
-//
-//            return viewHolder;
-//        }
-//
-//        @Override
-//        public void onBindViewHolder(@NonNull NumbersViewHolder holder, int position) {
-//
-//        }
-//
-//
-//        @Override
-//        public int getItemCount() {
-//            return numberItems;
-//        }
-
-        class NumbersViewHolder extends RecyclerView.ViewHolder {
-
-            TextView textView;
-
-            public NumbersViewHolder(@NonNull View itemView) {
-                super(itemView);
-
-                textView = itemView.findViewById(R.id.tv_view_holder_number);
-        }
-
-            void bind(String listBd) {
-                textView.setText(listBd);
-            }
+        void bind(String listBd) {
+            textView.setText(listBd);
         }
     }
+}
 }
 
