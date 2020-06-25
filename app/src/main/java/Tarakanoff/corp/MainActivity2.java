@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    //public RecyclerView numbersList;
+    public RecyclerView numbersList;
     //public NumbersAdapter numbersAdapter;
 
     @Override
@@ -38,12 +38,12 @@ public class MainActivity2 extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
 
-       //numbersList = findViewById(R.id.rv_bd);
+       numbersList = findViewById(R.id.rv_bd);
 
-       //LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-       //numbersList.setLayoutManager(layoutManager);
+       LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+       numbersList.setLayoutManager(layoutManager);
 
-       //numbersList.setHasFixedSize(false);
+       numbersList.setHasFixedSize(false);
 
        //numbersAdapter = new NumbersAdapter(100, this);
        //numbersList.setAdapter(numbersAdapter);
