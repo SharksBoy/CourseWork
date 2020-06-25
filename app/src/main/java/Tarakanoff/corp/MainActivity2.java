@@ -12,8 +12,13 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity2 extends AppCompatActivity {
+
+    //public RecyclerView numbersList;
+    //public NumbersAdapter numbersAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,5 +36,18 @@ public class MainActivity2 extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+
+       //numbersList = findViewById(R.id.rv_bd);
+
+       //LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+       //numbersList.setLayoutManager(layoutManager);
+
+       //numbersList.setHasFixedSize(false);
+
+       //numbersAdapter = new NumbersAdapter(100, this);
+       //numbersList.setAdapter(numbersAdapter);
+
+
     }
 }
